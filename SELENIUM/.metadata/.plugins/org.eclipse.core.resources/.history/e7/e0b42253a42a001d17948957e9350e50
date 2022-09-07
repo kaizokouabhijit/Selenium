@@ -1,0 +1,64 @@
+package dataproviders;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataProvidersDemo {
+	
+	
+	WebDriver driver;
+	
+	
+	@Test(dataProvider = "EasyCalculation")
+
+	
+	public void browser(String username, String password) throws Exception {
+		
+		
+		System.setProperty("webdriver.chrome.driver", "./ChromeBrowser/chromedriver.exe");
+		
+		driver = new ChromeDriver();
+		
+		driver.get("https://demo.opencart.com/index.php?route=common/home&language=en-gb");
+		//driver.findElement(By.id("log_email")).sendKeys(username);
+		driver.findElement(By.xpath("//div/a/span[.='My Account']")).click();
+		driver.findElement(By.xpath("//a[@href='https://demo.opencart.com/index.php?route=account/login&language=en-gb']")).click();
+		
+		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(username);
+		
+		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(password);
+		
+		Thread.sleep(3000);
+			
+		
+	}
+	@AfterMethod
+	
+	public void reset() {
+		driver.quit();
+	}
+	
+	@DataProvider(name = "EasyCalculation")
+	
+	public Object [][] passData(){
+		
+		
+		
+		Object[][] data = new Object[3][2];
+		data[0][0] = "9742235176";
+		data[0][1] = "Abhijit@11";
+		
+		data[1][0] = "9934282441";
+		data[1][1] = "Abhijit@11";
+		
+		data[2][0] = "8544042728";
+		data[2][1] = "Abhijit@11";
+		return data;
+		
+	}
+
+}

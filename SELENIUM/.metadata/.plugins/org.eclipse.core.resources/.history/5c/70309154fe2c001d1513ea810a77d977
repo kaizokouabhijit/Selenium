@@ -1,0 +1,25 @@
+package scrolldown;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class EasyMytripcasestudy {
+	
+	@Test
+	
+	
+	public void EasyMytrip() {
+System.setProperty("webdriver.chrome.driver","C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\handling Scrolldown\\ChromeBrowser\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.easemytrip.com/");
+		
+		driver.findElement(By.xpath("/html//div[@id='myTopnav']/div[@class='emt_nav']/ul/li[9]/a"))
+	}
+	
+
+}

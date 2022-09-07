@@ -1,0 +1,33 @@
+package scrolldown;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+public class ScrollDownDemo {
+	
+	
+	@BeforeTest
+	
+	public void setup () throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","./\\handling Scrolldown\\ChromeBrowser\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.spicejet.com/");
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)"," ");
+		
+		Thread.sleep(5000);
+		
+		js.executeScript("scroll(0,1200)");
+		
+		
+		//driver.quit();
+		
+		
+		
+	}
+
+}

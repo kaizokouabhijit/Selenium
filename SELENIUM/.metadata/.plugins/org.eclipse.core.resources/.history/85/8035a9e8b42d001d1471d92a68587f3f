@@ -1,0 +1,43 @@
+package assertionsusingtestng;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+public class HardAssertDemo {
+
+	
+	
+	@Test
+	public void assertEqual() {
+		Assert.assertEquals("This assertion will pass","This assertion will pass");
+		
+		System.out.println("This line is executed becoz assertEquals "+"passed since both strings the are same");
+		
+		Assert.assertEquals("assertion","This assertion will fail");
+		
+		System.out.println("This line will not be executed  because"+"assertEquals fails both the strings are different"+" jAlso the test method wil be declared failed");
+		
+	}
+	
+	@Test
+	
+	public void assertNotEquals() {
+		Assert.assertNotEquals("This assertion will pass","Since the "+"expected and actual result do not match");
+		System.out.println("This line is executed coz assertnotequals is true");
+	}
+	
+	@Test
+	
+	public void assertTrue() {
+		Assert.assertTrue(3<5);
+		
+		System.out.println("This line is executed because assertFalse passed the given condition");
+	}
+	
+	
+	
+	
+
+}

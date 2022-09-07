@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;SelectClassDemo&apos;&#x0D;&#x0A;- Original project: &apos;NavigationBrowser&apos;&#x0D;&#x0A;- Destination element: &apos;SelectClassDemo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ChromeBrowser&#x0D;&#x0A;     SeleniumDriver" description="Copy folders" element1="ChromeBrowser" element2="SeleniumDriver" files="0" flags="589830" folders="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1661836660732" target="/SelectClassDemo" units="0" version="1.0"/>
+</session>

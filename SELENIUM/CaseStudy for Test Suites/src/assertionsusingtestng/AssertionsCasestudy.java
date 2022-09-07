@@ -1,0 +1,85 @@
+package assertionsusingtestng;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class AssertionsCasestudy {
+	WebDriver driver;
+	
+	@BeforeTest
+	
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\CaseStudy for Test Suites\\ChromeBrowser\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.easemytrip.com/");
+		driver.manage().window().maximize();
+	}
+	
+	@Test
+	
+	public void assertequals() {
+		
+		Assert.assertEquals("My Account", "My Booking");
+		System.out.println("This test won't execute");
+		
+	}
+	
+	@Test
+public void assertnotequals() {
+		
+		Assert.assertNotEquals("My Account", "My Booking");
+		System.out.println("This test will execute");
+		
+	}
+	
+	@Test
+public void assertTrue() {
+	
+	Assert.assertTrue("My Account"=="My Booking", "This will fail");
+	System.out.println("This test won't execute");
+	
+}
+	
+	@Test
+	public void assertFalse() {
+		
+		Assert.assertFalse("My Account"=="My Booking", "This will execute");
+		System.out.println("This test will execute");
+		
+	}
+	
+	@Test
+	public void assertnull() {
+		
+		Assert.assertNull("My Account"=="My Booking", "This will fail");
+		System.out.println("This test won't execute");
+		
+	}
+	
+	@Test
+	public void assertnotnull() {
+		
+		Assert.assertNotNull("My Account"=="My Booking", "This will pass");
+		System.out.println("This test will execute");
+		
+	}
+	
+	
+	
+	@AfterTest
+	
+	public void wrapup() {
+		driver.quit();
+	}
+	
+	
+	
+	
+	
+
+}

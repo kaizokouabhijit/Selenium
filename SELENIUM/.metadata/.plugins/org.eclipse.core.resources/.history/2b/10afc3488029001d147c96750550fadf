@@ -1,0 +1,32 @@
+package DropDownDemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class JSAlertsDemo {
+
+	
+	
+	
+@Test
+
+public void jsalert() {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\SelectClassDemo\\ChromeBrowser\\chromedriver.exe");
+	
+	WebDriver driver = new ChromeDriver();
+	
+	driver.manage().window().maximize();
+	driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+	driver.findElement(By.xpath("//button[.='Click for JS Alert']")).click();
+	
+	
+	
+	
+	
+	//driver.quit();
+	
+	
+}
+}

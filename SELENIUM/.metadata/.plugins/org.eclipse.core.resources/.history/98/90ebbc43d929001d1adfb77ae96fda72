@@ -1,0 +1,5 @@
+package screenshot;
+
+public interface TakeScreeshot {
+
+}

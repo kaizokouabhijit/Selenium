@@ -1,0 +1,49 @@
+package DropDownDemo;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class MultipleFramesDemo {
+	
+	
+	@Test
+	
+	public void iframes() throws Exception {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\SelectClassDemo\\ChromeBrowser\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+
+		
+		driver.navigate().to("C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\Multipletests.html");
+		
+		
+		
+		//System.out.println(driver.findElements(By.tagName("iframe")).size());
+		
+		driver.switchTo().frame("easycalculation");
+		driver.navigate().to("https://www.easycalculation.com/");
+		driver.findElement(By.partialLinkText("Sign")).click();
+		
+		
+		
+		
+		driver.findElement(By.name("log_email")).sendKeys("9742235176");
+		driver.findElement(By.cssSelector("input#log_password")).sendKeys("Abhijit@11");
+		
+		driver.findElement(By.tagName("input[name='log_submit']")).click();
+		
+		
+		driver.quit();
+		
+	}
+
+}	

@@ -1,0 +1,81 @@
+package casestudy;
+
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class caseStudyTestSuite {
+	
+	
+	WebDriver driver;
+	String BaseUrl = "https://demo.opencart.com/";
+	
+
+	@Parameters("browserName")
+	
+	
+
+	@BeforeTest
+
+	public void setUp(String browserName) {
+		System.out.println("The browser name is : " + browserName);
+		
+		if (browserName.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\MultipleBrowser\\ChromeBrowser\\chromedriver.exe");
+			driver = new ChromeDriver();
+		} else if (browserName.equalsIgnoreCase("edge")) {
+			System.setProperty("webdriver.edge.driver",
+					"C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\MultipleBrowser\\EdgeBrowser\\msedgedriver.exe");
+			driver = new EdgeDriver();
+		}
+
+	}
+	
+	
+	
+
+	@Test
+	
+	@Parameters("browserName")
+
+	public void multiplebrowser(String browserName) throws Exception {
+
+		
+		driver.get(BaseUrl);
+		driver.manage().window().maximize();
+
+		
+
+		System.out.println("Title is"+driver.getTitle());
+		
+		
+		TakesScreenshot ts = (TakesScreenshot ) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		
+		System.out.println("Screenshot captured"+browserName);
+		
+		FileUtils.copyFile(source, new File("./Screenshots/"+browserName+".png"));
+		
+		
+		Thread.sleep(5000);
+
+	}
+
+	@AfterTest
+
+	public void tearDown() {
+		driver.quit();
+	}
+
+}
