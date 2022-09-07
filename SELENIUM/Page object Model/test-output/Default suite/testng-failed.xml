@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scrolldown.Easycalculationcasestudy">
+      <class name="com.easycalculationpages.Main">
         <methods>
-          <include name="ScrollDownTest"/>
-          <include name="wrapUp"/>
+          <include name="navigat"/>
           <include name="setup"/>
+          <include name="wrapUp"/>
         </methods>
-      </class> <!-- scrolldown.Easycalculationcasestudy -->
+      </class> <!-- com.easycalculationpages.Main -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
