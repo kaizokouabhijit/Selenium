@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assertionsusingtestng.AssertionsCasestudy">
+      <class name="casestudy.SeleniumIDECaseStudyTest">
         <methods>
-          <include name="assertnull"/>
-          <include name="assertTrue"/>
-          <include name="setup"/>
-          <include name="assertequals"/>
+          <include name="setUp"/>
+          <include name="seleniumIDECaseStudy"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- assertionsusingtestng.AssertionsCasestudy -->
+      </class> <!-- casestudy.SeleniumIDECaseStudyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
