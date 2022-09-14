@@ -7,19 +7,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class PositiveTests {
 
+	WebDriver driver;
+	
+	
+	
 	@Test
 	public void logInTest() {
 		System.out.println("Starting logIn test");
+		driver.quit();
 
-		// Create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\git\\Selenium\\Selenium\\SELENIUM\\advanced-selenium-webdriver\\src\\main\\resources\\chromedriver.exe");
 
+		driver = new ChromeDriver();
 		// open main page
 		String url = "http://the-internet.herokuapp.com/";
 		driver.get(url);
@@ -55,7 +59,12 @@ public class PositiveTests {
 				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
 						+ expectedSuccessMessage + "\nactualSuccessMessage: " + actualSuccessMessage);
 
-		// Close browser
+		
+	}
+	
+	@AfterTest
+	
+	public void wrapUp() {
 		driver.quit();
 	}
 }

@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -7,22 +7,18 @@
 </head>
 <body>
 <table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">NegativeTestSuite</th></tr>
-<tr><td><a href="#t0">NegativeUsernameTest-CH</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">8,122</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">NegativeUsernameTest-FF</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">11,062</td><td></td><td></td></tr>
-<tr><td><a href="#t2">NegativePasswordTest-CH</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">7,913</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">NegativePasswordTest-FF</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">7,697</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num">34,794</th><th colspan="2"></th></tr>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">PositiveTestSuite</th></tr>
+<tr><td><a href="#t0">PositiveTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">107</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">NegativeTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">NegativeUsernameTest-CH &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.NegativeTests</td><td><a href="#m0">negativeTest</a></td><td rowspan="1">1536848680600</td><td rowspan="1">2884</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">NegativeUsernameTest-FF &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.NegativeTests</td><td><a href="#m1">negativeTest</a></td><td rowspan="1">1536848691276</td><td rowspan="1">2473</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">NegativePasswordTest-CH &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.NegativeTests</td><td><a href="#m2">negativeTest</a></td><td rowspan="1">1536848699147</td><td rowspan="1">3435</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">NegativePasswordTest-FF &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.NegativeTests</td><td><a href="#m3">negativeTest</a></td><td rowspan="1">1536848707085</td><td rowspan="1">2016</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PositiveTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PositiveTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.herokuapp.theinternet.PositiveTests</td><td><a href="#m0">wrapUp</a></td><td rowspan="1">1663137731792</td><td rowspan="1">1</td></tr><tr><th colspan="4">PositiveTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.herokuapp.theinternet.PositiveTests</td><td><a href="#m1">logInTest</a></td><td rowspan="1">1663137731781</td><td rowspan="1">6</td></tr></tbody>
 </table>
-<h2>NegativeUsernameTest-CH</h2><h3 id="m0">com.herokuapp.theinternet.NegativeTests#negativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>incorrectUsername</td><td>SuperSecretPassword!</td><td>Your username is invalid!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>NegativeUsernameTest-FF</h2><h3 id="m1">com.herokuapp.theinternet.NegativeTests#negativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>incorrectUsername</td><td>SuperSecretPassword!</td><td>Your username is invalid!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>NegativePasswordTest-CH</h2><h3 id="m2">com.herokuapp.theinternet.NegativeTests#negativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>tomsmith</td><td>incorrectPassword</td><td>Your password is invalid!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>NegativePasswordTest-FF</h2><h3 id="m3">com.herokuapp.theinternet.NegativeTests#negativeTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>tomsmith</td><td>incorrectPassword</td><td>Your password is invalid!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PositiveTest</h2><h3 id="m0">com.herokuapp.theinternet.PositiveTests#wrapUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.herokuapp.theinternet.PositiveTests.wrapUp(PositiveTests.java:68)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.herokuapp.theinternet.PositiveTests#logInTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.herokuapp.theinternet.PositiveTests.logInTest(PositiveTests.java:22)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [NegativeTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="NegativeUsernameTest-FF(failed)">
-    <parameter name="password" value="SuperSecretPassword!"/>
-    <parameter name="browser" value="firefox"/>
-    <parameter name="expectedMessage" value="Your username is invalid!"/>
-    <parameter name="username" value="incorrectUsername"/>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PositiveTestSuite]">
+  <test thread-count="5" name="PositiveTest(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.NegativeTests">
+      <class name="com.herokuapp.theinternet.PositiveTests">
         <methods>
-          <include name="negativeTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="logInTest"/>
+          <include name="wrapUp"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.NegativeTests -->
+      </class> <!-- com.herokuapp.theinternet.PositiveTests -->
     </classes>
-  </test> <!-- NegativeUsernameTest-FF(failed) -->
-</suite> <!-- Failed suite [NegativeTestSuite] -->
+  </test> <!-- PositiveTest(failed) -->
+</suite> <!-- Failed suite [PositiveTestSuite] -->
