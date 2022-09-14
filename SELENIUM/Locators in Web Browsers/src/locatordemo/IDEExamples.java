@@ -8,11 +8,11 @@ public class IDEExamples {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\SELENIUM\\Locators in Web Browsers\\ChromeBrowser\\chromedriver.exe");
+				"C:\\Users\\abhijit.s\\OneDrive - SintecMedia Ltd\\Desktop\\git\\Selenium\\Selenium\\SELENIUM\\Locators in Web Browsers\\ChromeBrowser\\chromedriver.exe");
 		// Set Chrome Browser path "Key" and "values"
 		WebDriver driver = new ChromeDriver(); // Create intance for driver
-	//	driver.manage().window().maximize();
-	//	driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 	//	driver.findElement(By.name("username")).sendKeys("Abhijit");
 		
@@ -55,6 +55,8 @@ public class IDEExamples {
 		
 		String URL = driver.getCurrentUrl();
 		System.out.println(URL);
+		
+		driver.quit();
 
 	}
 
